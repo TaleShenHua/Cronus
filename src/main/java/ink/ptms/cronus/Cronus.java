@@ -114,6 +114,7 @@ public class Cronus extends CronusPlugin implements PluginMessageListener {
                                     Map<String, Object> questStag = new HashMap<>();
                                     for(QuestStage stage : quest.getStage()){
                                         System.out.println(stage.getContent());
+                                        System.out.println(stage.getContentCompleted());
                                     }
                                     questMap.put("QuestStage", questStag);
                                     quests.put(questId, questMap);
