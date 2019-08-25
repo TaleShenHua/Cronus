@@ -1,0 +1,19 @@
+name: Cronus
+main: ink.ptms.cronus.Cronus
+version: ${project.version}
+api-version: 1.13
+
+author: 坏黑
+
+soft-depend:
+- Citizens
+- Shopkeeper
+- MythicMobs
+- Skript
+- SkillAPI
+- WorldEdit
+- WorldGuard
+- PlaceholderAPI
+- Vault
+- SacredItem
+- PurtmarsItem

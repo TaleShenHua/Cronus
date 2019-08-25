@@ -1,0 +1,46 @@
+def_0:
+  theme: CRONUS_MENU
+  title: '对话'
+  target: 'name=dialog_test'
+  condition: 'player.alive'
+  dialog:
+    text:
+    - '&7你好!'
+    - '&7欢迎使用克洛诺斯'
+    reply:
+    - text:
+      - '&7你好'
+      dialog:
+        item: DIAMOND:0
+        text:
+        - '&7你可以使用克洛诺斯'
+        - '&7与任何生物对话'
+        reply:
+        - item: WOOL
+          text:
+          - '&7不错'
+          dialog:
+            item: IRON_INGOT:0
+            text:
+            - '&7并且可以在任务中'
+            - '&7添加特殊对话内容'
+            reply:
+            - item: WOOL:13
+              text:
+              - '&7坏黑真帅'
+              effect:
+              - 'send.title &r|我也觉得|10|20|10'
+    - text:
+      - '&7我有钻石'
+      condition: 'item.hand != diamond'
+      condition-dialog:
+        text:
+        - '&c我没钻石'
+    - text:
+      - '&7再见'
+      effect:
+      - 'send.title &r|慢走|10|20|10'
+  open:
+  - 'send.sound ITEM_ARMOR_EQUIP_LEATHER-1-1'
+  close:
+  - 'send.title &r|慢走|10|20|10'

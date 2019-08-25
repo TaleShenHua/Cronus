@@ -1,0 +1,13 @@
+# 选择性启用或禁用以下无需权限便可以使用的玩家命令
+# 这些命令用于在书本界面中使用
+PlayerCommands:
+  # 打开日志
+  CronusQuestLogs: true
+  # 放弃任务
+  CronusQuestQuit: true
+  # 切换任务可视状态
+  CronusQuestVisible: true
+
+# 指令禁用后的提示信息
+# 填写 $spigot 则提示原版无命令信息 (Unknown command. Type "/help" for help.)
+DisableMessage: '$spigot'

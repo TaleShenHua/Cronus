@@ -1,0 +1,21 @@
+# 全局触发器
+# 当玩家在某个事件下达成特定的条件后执行指定动作
+# 允许使用所有任务事件以及一些专用触发器
+#
+# 例如：
+# player_join —— 玩家进入服务器
+# player_quit —— 玩家离开服务器（这个事件下进行任务操作无法写入数据库）
+#
+# 全局触发器是简陋的快捷的特殊需求解决方案
+# 请勿作为核心功能在服务器中运行
+Events: []
+
+#Events:
+#- name: player_join
+#  effect:
+#  - 'send.message.all &7玩家 &f{player:name} &7加入游戏.'
+#- name: player_kill
+#  data:
+#    victim: type=ZOMBIE
+#  effect:
+#  - 'send.message &7你杀死了一只僵尸.'

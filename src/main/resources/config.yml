@@ -1,0 +1,124 @@
+# 插件设置
+Settings:
+  # 任务引导模式
+  # 视觉优先 = Visual（更流畅的全息移动）
+  # 性能优先 = Performance（更高的性能）
+  guide-mode: Performance
+  # 对话模式
+  # 箱子界面 = cronus_menu
+  # 聊天文本 = cronus_demo
+  dialog-style: cronus_menu
+  # 对话设置（界面模式）
+  dialog-chest:
+    # 界面行数
+    rows-script: 'Math.max(Math.ceil($size / 5.0) + 2, 3)'
+    # 对话位置
+    slot-message: 10
+    # 回复位置
+    slot-reply:
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+
+# 数据储存
+Database:
+  # UUID 模式
+  # 如果你是正版服务器，则开启 SQL 储存并启用该模式
+  uniqueId: false
+  # 储存类型
+  # 可用类型 YAML、SQL
+  type: YAML
+  # 数据库相关地址
+  host: localhost
+  port: 3306
+  user: root
+  password: ''
+  database: test
+  table: cronus_database
+
+# 任务状态
+# 当玩家进行任务时，在特殊位置显示任务当前进度
+# 与计分板显示不同，这个是短暂的
+Status:
+  # 显示类型：BOSSBAR=血条、ACTIONBAR=动作栏、TITLE=标题栏、NONE=禁用
+  type: BOSSBAR
+  # 血条配置
+  bossbar:
+    # 颜色：PINK=粉色、BLUE=蓝色、RED=红色、GREEN=绿色、YELLOW=黄色、PURPLE=紫色、WHITE=白色
+    color: BLUE
+    # 风格：SOLID、SEGMENTED_6、SEGMENTED_10、SEGMENTED_12、SEGMENTED_20
+    style: SEGMENTED_20
+  # 提示音效
+  sound: 'ENTITY_PLAYER_LEVELUP-1-2'
+
+# 计分板显示
+Scoreboard:
+  # 是否启用
+  enable: true
+  # 录入任务
+  # 通过任务配置中的标签判断是否写入计分板
+  # 右侧参数为列表优先级，数值越高排名越靠前
+  list:
+    主线任务: 1
+    支线任务: 0
+  # 显示内容
+  content:
+  - '&6&l当前任务'
+  - ''
+  - '{format}'
+  - '&e examplehost.com'
+  # 任务格式
+  format:
+  - '{display}'
+  - '{content}'
+  - ''
+
+# 任务纵览
+QuestBook:
+  # 任务纵览序号
+  # 用于规定多种不同的纵览格式与内容
+  def_0:
+    # 录入任务
+    # 通过任务配置中的 "booktag" 判断是否写入任务纵览
+    # 右侧参数为列表优先级，数值越高排名越靠前
+    list:
+      主线任务: 1
+      支线任务: 0
+    # 纵览名字
+    display: '主线'
+
+# 快捷物品
+# 该物品会绑定至玩家的快捷栏或背包，点击执行指定操作
+QuestItem:
+  # 物品绑定位置
+  # 如果位于 0-8  快捷栏中，则手持右键触发动作
+  # 如果位于 9-35 背包栏中，则点击物品触发动作
+  8:
+    # 是否启用该物品
+    enable: false
+    # 物品
+    material: book
+    name: '&7任务纵览'
+    lore:
+    - ''
+    - '&8点击查看当前任务进度'
+    # 动作
+    effect:
+    - 'command.player CronusQuestBook def_0'

@@ -1,0 +1,19 @@
+# 序号
+def_0:
+  # 物品判断规则
+  item: 'name=Example quest item'
+  # 物品触发方式
+  # LEFT_CLICK=左键、RIGHT_CLICK=右键、CONSUME=消耗
+  event: USE
+  # 物品触发条件
+  condition: ~
+  # 冷却时间
+  cooldown: 1m
+  # 物品触发动作
+  effect:
+  - 'inventory.hand - 1'
+  - 'send.title &r|&e你使用了特殊物品.|10|10|10'
+  # 物品触发动作（条件不足）
+  effect-condition: []
+  # 物品触发动作（冷却）
+  effect-cooldown: []
