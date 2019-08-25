@@ -92,7 +92,7 @@ public abstract class DisplayBase extends DialogDisplay {
         // 条件
         for (int i = 0; i < dialogPack.getReply().size(); i++) {
             DialogPack reply = dialogPack.getReply().get(i).getPack(player, null);
-            if (!isHide(player, reply)) {
+            if (reply != null && !isHide(player, reply)) {
                 replyMap.getReply().add(new Reply(UUID.randomUUID().toString(), reply, dialogPack.getReply().get(i)));
             }
         }

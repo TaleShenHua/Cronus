@@ -48,12 +48,7 @@ public class Time {
 
     public boolean isTimeout(DataQuest dataQuest) {
         Calendar calendar = Calendar.getInstance();
-        switch (type) {
-            case TIME:
-                return dataQuest.getTimeStart() + time < System.currentTimeMillis();
-            default:
-                return isTimeout();
-        }
+        return type == TimeType.TIME ? dataQuest.getTimeStart() + time < System.currentTimeMillis() : isTimeout();
     }
 
     public boolean isTimeout() {

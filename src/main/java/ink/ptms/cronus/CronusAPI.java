@@ -159,7 +159,7 @@ public class CronusAPI {
         }
         QuestStage stage = quest.getStage().get(0);
         // 无阶段内容
-        if (stage.getContent().isEmpty()  && stage.getContentGlobal().isEmpty()) {
+        if (stage.getContent().isEmpty() && stage.getContentGlobal().isEmpty()) {
             return false;
         }
         // 无阶段条目
